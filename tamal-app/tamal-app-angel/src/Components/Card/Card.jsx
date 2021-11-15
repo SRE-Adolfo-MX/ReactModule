@@ -15,9 +15,9 @@ const Card = ({ title = "Sin Título", imgUrl, text, linkBtn, oferta=false, prec
   let infoCompra;
 
   if (oaxaqueno) {
-     infoCompra = "Tu Compra Tamal Oaxaqueño "
+     infoCompra = "Tu Compra: Tamal Oaxaqueño "
   } else {
-    infoCompra = "Tu Compra Tamal normal "
+    infoCompra = "Tu Compra: Tamal normal "
   }
 
   let respuesta
@@ -45,7 +45,7 @@ let respuesta2
   const buttonStatus = atole ?  false : true
 
   return (
-    <div className={`card-title ${styles.card}`}>
+    <div className={`card ${styles.card}`}>
       <CardImage imgUrl={imgUrl} />
       <div className="card-body">
         <CardTitle title={title} oferta={oferta} />
@@ -66,8 +66,13 @@ let respuesta2
         <CardBody text={text} />
         <div className={`card-title ${styles.totalCompra}`}>
           {infoCompra}
+          <br/>
+          <br/>
+          <PrimaryButton link={linkBtn} text="Comprar" />
         </div>
-        <PrimaryButton link={linkBtn} text="Comprar" />
+        
+        
+       
       </div>
     </div>
   );

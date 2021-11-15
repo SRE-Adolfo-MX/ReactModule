@@ -1,7 +1,14 @@
 
-.container {
-  background-color: yellow;
+
   .primaryTitle {
-    color: blue;
+
+    text-decoration: none;
+    padding: 2px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    border: solid black;
+    background-color:black;
+    border-radius: 10px;
+    left: 100px;
   }
-}
