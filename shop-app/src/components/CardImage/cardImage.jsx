@@ -1,7 +1,9 @@
-const CardImage = () => {
+import React from 'react';
+
+const CardImage = ({IMAGE}) => {
     return (
         <img
-            src="https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/mg/gm/1p/images/product-images/img_large/00019425212284l.jpg"
+            src={IMAGE}
             className="card-img-top"
             width="200px"
             alt="..."

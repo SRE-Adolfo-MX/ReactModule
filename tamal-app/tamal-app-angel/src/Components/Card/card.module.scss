@@ -1,0 +1,23 @@
+.totalCompra {
+    background-color: red;
+}
+
+.card {
+    width: 50%;
+    float: left;
+
+    button {
+        text-decoration: none;
+        padding: 2px;
+        font-weight: 600;
+        font-size: 10px;
+        color: black;
+        background-color:white;
+        border-radius: 6px;
+    }
+    
+    button:focus {
+        background-color: chartreuse;
+    }
+}
+
