@@ -14,10 +14,13 @@ const Card = ({ title = "Sin Título", imgUrl, text, linkBtn, oferta=false, prec
 
   let infoCompra;
 
+  let color;
+
   if (oaxaqueno) {
-     infoCompra = "Tu Compra: Tamal Oaxaqueño "
+     infoCompra = "Tu Compra: Tamal oaxaqueño "
+     color = "green";
   } else {
-    infoCompra = "Tu Compra: Tamal normal "
+    infoCompra = "Tu Compra: Tamal de maiz "
   }
 
   let respuesta
@@ -49,9 +52,8 @@ let respuesta2
       <CardImage imgUrl={imgUrl} />
       <div className="card-body">
         <CardTitle title={title} oferta={oferta} />
-        <p>{precioFinal}</p>
         <div>
-          <button onClick={()=>setOaxaqueno(false)}>Hoja de Maiz</button>
+          <button styles={{color: color}} onClick={()=>setOaxaqueno(false)}>Hoja de Maiz</button>
           <button onClick={()=>setOaxaqueno(true)}>Hoja de plátano</button>
         </div>
         <div>
@@ -67,6 +69,7 @@ let respuesta2
         <div className={`card-title ${styles.totalCompra}`}>
           {infoCompra}
           <br/>
+          <p>El total es ${precioFinal}.00</p>
           <br/>
           <PrimaryButton link={linkBtn} text="Comprar" />
         </div>
