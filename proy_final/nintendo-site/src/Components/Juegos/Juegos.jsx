@@ -18,11 +18,18 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
     useEffect(() => {
       let elComponenteExiste = true;
   
-      fetch("https://api-cafe-tamales.herokuapp.com/api/tamales")
+      fetch("https://nintendo-fddf6-default-rtdb.firebaseio.com/Juegos.json")
         .then((result) =>
           result.json().then((data) => {
             if (elComponenteExiste) {
-              setItems(data.tamal);
+              const dataFinal = []
+              dataFinal.push(data)
+              const postsArray = Object.keys(data).map(key => {
+                let post = data[key]
+                return post
+            })
+              //console.log(data)
+              setItems(postsArray);
             }
           })
         )
@@ -37,7 +44,7 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
     }, []);
 
 
-    console.log("esto es resultado",items)
+    //console.log("esto es resultado",items)
   
     if (loading)
       return <Loader type="Puff" color="#00BFFF" height={100} width={100} />;
@@ -50,48 +57,55 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
       );
   
 
+
+
     return (
         
         <div className={styles.content}> 
-            <div className={styles.contentFlex}>
-                <h1>Tienda de juegos</h1>
-                <button className={styles.button} >Ver todos los juegos ></button>
-            </div>
-            <div>
-                <img className={styles.Centerstages}  src={Centerstages} alt="Centerstages" />
-            </div>
-            <div style={{display: "flex", justifyContent: "space-around"}}>
-                <h2> Ya disponible </h2>
-                <button className={styles.button} >Más información ></button>
-                <img  src={E} alt="E" />
-            </div>
-            <div style={{display: "flex", justifyContent: "space-around"}}>
-                <h2> Los más vendidos de Nintendo Switch </h2>
-                <button className={styles.button2} > Ver la lista completa ></button>
-            </div>
-        {items.map((item) => {
-        const { _id, img, name, price } = item;
-        const onRemoveFromCart = () => {
-          removeFromCart({id: _id, price})
-        }
-        const qty = cartItems[_id]?.qty
-        
-        return (
-        
-        <Card
-            key={_id}
-            title={name}
-            imgUrl={img}
-            price={parseInt(price)}
-            addToCart={addToCart}
-            onRemoveFromCart={onRemoveFromCart}
-            id={_id}
-            qty={qty}
-          />
-        );
-      })}
-           
-        </div>        
+          <div className={styles.contentFlex}>
+            <h1>Tienda de juegos</h1>
+            <button className={styles.button} >Ver todos los juegos ></button>
+          </div>
+          <div>
+            <img className={styles.Centerstages}  src={Centerstages} alt="Centerstages" />
+          </div>
+          <div style={{display: "flex", justifyContent: "space-around"}}>
+            <h2> Ya disponible </h2>
+            <button className={styles.button} >Más información ></button>
+            <img  src={E} alt="E" />
+          </div>
+          <div style={{display: "flex", justifyContent: "space-around"}}>
+            <h2> Los más vendidos de Nintendo Switch </h2>
+            <button className={styles.button2} > Ver la lista completa ></button>
+          </div>
+
+        <div className={styles.card}>
+              {items.map((item) => {
+              const { _id, img, name, price } = item;
+              //console.log("esto es el item",key)
+              const onRemoveFromCart = () => {
+                removeFromCart({id: _id, price})
+              }
+              const qty = cartItems[_id]?.qty
+              
+              return (
+              
+
+              <Card
+                  key={_id}
+                  title={name}
+                  imgUrl={img}
+                  price={parseInt(price)}
+                  addToCart={addToCart}
+                  onRemoveFromCart={onRemoveFromCart}
+                  id={_id}
+                  qty={qty}
+                />
+
+              );
+            })}     
+        </div>
+      </div>        
     )
 }
 
