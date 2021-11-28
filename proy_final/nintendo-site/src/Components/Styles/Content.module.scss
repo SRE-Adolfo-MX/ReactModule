@@ -1,0 +1,34 @@
+.content {
+    display: block;
+
+    .contentFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .button {
+        background-color: #e60012;
+        color: aliceblue;
+        font-size: 1em;
+        border-radius: 10px;
+        width: 200px;
+        height: 60px;
+        margin-top: 10px;
+        font-weight: bold;
+        border: 1px solid #e60012;
+    }
+    .Centerstages{
+        width: 100%;
+        height: auto;
+    }
+    .button2 {
+        background-color: transparent;
+        color: red;
+        font-size: 1em;
+        border-radius: 10px;
+        width: 200px;
+        height: 60px;
+        margin-top: 10px;
+        font-weight: bold;
+        border: transparent
+    }    
+}
