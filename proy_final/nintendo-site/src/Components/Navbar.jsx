@@ -7,11 +7,11 @@ import Noticias from './Images/Noticias.png'
 
 const Navbar = ({cartItems, emptyCart}) => {
   return (
-    <div style={{display: 'flex', justifyContent:'space-evenly'}}>
-      <img style={{width: '93px', height: '55px' }} src={logoNintendo} alt="Logo" />  
+    <div style={{display: 'flex', justifyContent:'space-between'}}>
+      <img style={{width: '93px', height: '80px' }} src={logoNintendo} alt="Logo" />  
       <Link to="/Juegos"><img src={JuegosImages} alt="Juegos" /> </Link>
       <Link to="/Equipos"><img src={Equipo} alt="Equipo" /></Link>
-      <Link to="/Noticias"><img src={Noticias} alt="Noticias" /></Link>
+      <Link to="/Noticias"><img src={Noticias} alt="Equipo" /></Link>
     </div>
   )
 }
