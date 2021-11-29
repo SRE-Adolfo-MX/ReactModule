@@ -23,11 +23,7 @@ const Card = ({
 
 
   return (
-<<<<<<< HEAD
     <div className="card" style={cardStyle}>
-=======
-    <div className={style.card} style={{ width: "18rem" }}>
->>>>>>> 4f6f6fa1af44929cc44ba43b304b6cfbdf4517b8
       <CardImage imgUrl={imgUrl} />
       <div className="card-body">
         <CardTitle title={title} id={id}/>
