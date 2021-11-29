@@ -4,7 +4,7 @@ import Console from './Console'
 const Equipos = () => {
   return (
     <div>
-      <h1>Elije tu consola Nintendo Switch™️</h1> 
+      <h1>Elije tu consola Nintendo Switch™️</h1>
       <Console />
       <Console />
       <Console />

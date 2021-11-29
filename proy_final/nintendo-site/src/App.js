@@ -12,7 +12,7 @@ function App() {
  
   const [cartItems, setCartItems] = useState({});
 
-  // const emptyCart = () => setCartItems({});
+  const emptyCart = () => setCartItems({});
 
   const addToCart = (catalogItem) => {
     const existingItem = cartItems[catalogItem.id];
