@@ -51,7 +51,7 @@ const CardNoticias = ({img}) => {
                 return (
                     <div className={styles.CardNoticias}>
                         <CardImageNot img={img}/>
-                        <CardBodyNot date={date} body={body}/>                 
+                        <CardBodyNot date={date} body={body} />                 
                     </div>
                 )       
             }) 
