@@ -12,8 +12,17 @@ const Card = ({
   id,
   qty,
 }) => {
+
+  const cardStyle = {
+    display: "flex",
+    flexWrap: "wrap",
+    width: "18rem",
+    margin: "10px",
+  }
+
+
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card" style={cardStyle}>
       <CardImage imgUrl={imgUrl} />
       <div className="card-body">
         <CardTitle title={title} id={id}/>

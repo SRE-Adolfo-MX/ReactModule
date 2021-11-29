@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import CenterHome from '../Images/CenterHome.jpeg'
 import styles from "../Styles/Home.module.scss";
 
 const Home = () => {
-  const [mostrar, setMostrar] = useState(true);
+  // const [mostrar, setMostrar] = useState(true);
   return (
     <div style={{display: "block"}}>
         <div style={{display: "flex", justifyContent: "space-around"}}>
@@ -11,7 +11,7 @@ const Home = () => {
         </div>
         <div style={{display: "flex", justifyContent:"space-between"}}>
           <h2>Termina el 30/11 a las 23:59 (Horario del Pacifico)</h2>
-          <button className={styles.button} >Compra ahora ></button>
+          <button className={styles.button} >Compra ahora ▷</button>
         </div>
     </div>
 

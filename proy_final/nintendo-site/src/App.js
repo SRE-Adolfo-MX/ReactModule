@@ -3,15 +3,16 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar";
 import Navbar2 from "./Components/Navbar2";
-import Content from "./Components/Content"
+// import Content from "./Components/Content"
 import Juegos from "./Components/Juegos/Juegos"
+import Equipos from "./Components/Equipos/Equipos";
 
 
 function App() {
  
   const [cartItems, setCartItems] = useState({});
 
-  const emptyCart = () => setCartItems({});
+  // const emptyCart = () => setCartItems({});
 
   const addToCart = (catalogItem) => {
     const existingItem = cartItems[catalogItem.id];
@@ -59,8 +60,8 @@ function App() {
           <Navbar  />
           <Navbar2 />  
           <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
+            <Route path="/" element={<Home />} />
+            <Route
             path="/Juegos"
             element={
               <Juegos
@@ -68,8 +69,9 @@ function App() {
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
               />
-            }
-          />
+              } 
+            />
+            <Route path="/Equipos" element={<Equipos />} />
           </Routes>
       </div>
     </div>

@@ -1,13 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import styles from '../Styles/Content.module.scss'
 import Centerstages from '../Images/Centerstages.jpeg'
 import E from '../Images/E.png'
 import Card from "../Cards/Card";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
-import juegosHeader from "./JuegosHeader"
+// import juegosHeader from "./JuegosHeader"
 
 const Juegos = ({addToCart, removeFromCart, cartItems}) => {
 
@@ -64,19 +64,19 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
         <div className={styles.content}> 
           <div className={styles.contentFlex}>
             <h1>Tienda de juegos</h1>
-            <button className={styles.button} >Ver todos los juegos ></button>
+            <button className={styles.button} >Ver todos los juegos ▷ </button>
           </div>
           <div>
             <img className={styles.Centerstages}  src={Centerstages} alt="Centerstages" />
           </div>
           <div style={{display: "flex", justifyContent: "space-around"}}>
             <h2> Ya disponible </h2>
-            <button className={styles.button} >Más información ></button>
+            <button className={styles.button} >Más información ▷</button>
             <img  src={E} alt="E" />
           </div>
           <div style={{display: "flex", justifyContent: "space-around"}}>
             <h2> Los más vendidos de Nintendo Switch </h2>
-            <button className={styles.button2} > Ver la lista completa ></button>
+            <button className={styles.button2} > Ver la lista completa ▷</button>
           </div>
 
         <div className={styles.card}>
@@ -89,9 +89,7 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
               const qty = cartItems[_id]?.qty
               
               return (
-              
-
-              <Card
+                <Card
                   key={_id}
                   title={name}
                   imgUrl={img}
@@ -101,7 +99,6 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
                   id={_id}
                   qty={qty}
                 />
-
               );
             })}     
         </div>
