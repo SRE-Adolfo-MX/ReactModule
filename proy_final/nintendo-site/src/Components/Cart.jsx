@@ -5,17 +5,20 @@ const Cart = ({ cartItems, emptyCart}) => {
   //   (sum, item) => sum + item.qty,
   //   0
   // );
-  const totalItems = 10
-  const totalPrice = 10
-
+  const totalItems = Object.values(cartItems).length
+  const totalPrice = Object.values(cartItems).reduce(
+    (sum, item) => sum + item.price,
+    0
+  );
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", justifyContent:'space-between' }}>
         <span>{totalItems}</span>
         🛒
         <span>${totalPrice}</span>
+        <div onClick={emptyCart}>🗑️</div>
       </div>
-      <div onClick={emptyCart}>🗑️</div>
+
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import style from "../Styles/button.module.scss"
 
 const Counter = ({ qty, addToCart, onRemoveFromCart, price, id }) => {
   const handleAdd = () => {
@@ -8,12 +9,12 @@ const Counter = ({ qty, addToCart, onRemoveFromCart, price, id }) => {
   return (
     <div>
       {!qty ? (
-        <button onClick={handleAdd}>Comprar</button>
+        <button className={style.button} onClick={handleAdd}>Comprar</button>
       ) : (
         <div>
-          <button onClick={onRemoveFromCart}>-</button>
+          <button className={style.btn} onClick={onRemoveFromCart}>-</button>
           {qty || 0}
-          <button onClick={handleAdd}>+</button>
+          <button className={style.btn} onClick={handleAdd}>+</button>
         </div>
       )}
     </div>

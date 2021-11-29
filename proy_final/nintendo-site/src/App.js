@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="container-fluid">
       <div className="row">
-          <Navbar  />
+          <Navbar  cartItems={cartItems} emptyCart={emptyCart} />
           <Navbar2 />  
           <Routes>
             <Route path="/" element={<Home />} />

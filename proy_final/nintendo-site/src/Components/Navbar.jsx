@@ -4,6 +4,7 @@ import logoNintendo from './Images/logoNintendo.jpg'
 import JuegosImages from './Images/juegos.png'
 import Equipo from './Images/Equipo.png'
 import Noticias from './Images/Noticias.png'
+import Cart from './Cart'
 
 const Navbar = ({cartItems, emptyCart}) => {
   return (
@@ -12,6 +13,7 @@ const Navbar = ({cartItems, emptyCart}) => {
       <Link to="/Juegos"><img src={JuegosImages} alt="Juegos" /> </Link>
       <Link to="/Equipos"><img src={Equipo} alt="Equipo" /></Link>
       <Link to="/Noticias"><img src={Noticias} alt="Equipo" /></Link>
+      <Cart cartItems={cartItems} emptyCart={emptyCart} />
     </div>
   )
 }

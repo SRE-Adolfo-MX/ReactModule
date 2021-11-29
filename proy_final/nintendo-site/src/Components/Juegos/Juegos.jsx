@@ -89,7 +89,12 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
               const qty = cartItems[_id]?.qty
               
               return (
+<<<<<<< HEAD
                 <Card
+=======
+              
+              <Card 
+>>>>>>> 4f6f6fa1af44929cc44ba43b304b6cfbdf4517b8
                   key={_id}
                   title={name}
                   imgUrl={img}

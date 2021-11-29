@@ -12,7 +12,7 @@ const Console = () => {
     <div className={styles.content}>
       <div className={styles.contentFlex}>
         <ConsoleTitle title="Nintendo Switch – Modelo OLED paquete blanco" />
-        <button className={styles.button2}>Encuentra proveedores ▷ </button>
+        <button className={styles.button}>Encuentra proveedores ▷ </button>
       </div>
       <div className={styles.description}>
         <ConsoleImage />
