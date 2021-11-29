@@ -12,12 +12,13 @@ const Cart = ({ cartItems, emptyCart}) => {
   );
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", justifyContent:'space-between' }}>
         <span>{totalItems}</span>
         🛒
         <span>${totalPrice}</span>
+        <div onClick={emptyCart}>🗑️</div>
       </div>
-      <div onClick={emptyCart}>🗑️</div>
+
     </>
   );
 };
