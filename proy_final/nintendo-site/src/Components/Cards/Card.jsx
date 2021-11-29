@@ -2,6 +2,7 @@ import React from "react";
 import Counter from "../Counter/Counter";
 import CardImage from "./CardImage";
 import CardTitle from "./CardTitle/CardTitle";
+import style from "../Styles/Card.module.scss"
 
 const Card = ({
   title = "Sin Título",
@@ -13,7 +14,7 @@ const Card = ({
   qty,
 }) => {
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className={style.card} style={{ width: "18rem" }}>
       <CardImage imgUrl={imgUrl} />
       <div className="card-body">
         <CardTitle title={title} id={id}/>

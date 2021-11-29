@@ -90,8 +90,7 @@ const Juegos = ({addToCart, removeFromCart, cartItems}) => {
               
               return (
               
-
-              <Card
+              <Card 
                   key={_id}
                   title={name}
                   imgUrl={img}
