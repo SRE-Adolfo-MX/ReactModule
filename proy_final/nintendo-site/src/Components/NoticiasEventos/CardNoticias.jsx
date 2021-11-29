@@ -3,6 +3,8 @@ import CardImageNot from "./CardImageNot";
 import CardBodyNot from "./CardBodyNot";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
+import styles from "./CardImageNot.module.scss";
+
 
 
 const CardNoticias = ({img}) => {
@@ -40,16 +42,16 @@ const CardNoticias = ({img}) => {
   }, []);
 
   return (
-    <div>
+    <div className= {styles.content} >
         { 
          Object.keys(items).length >0 && 
          Object.keys(items).map((key) => {
                 const item= items[key]
                 const { _id, img, body, date } = item;
                 return (
-                    <div style={noticiasStyle}>
+                    <div className={styles.CardNoticias}>
                         <CardImageNot img={img}/>
-                        <CardBodyNot/>                 
+                        <CardBodyNot date={date} body={body}/>                 
                     </div>
                 )       
             }) 
