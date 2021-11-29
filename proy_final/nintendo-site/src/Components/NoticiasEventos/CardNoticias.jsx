@@ -13,19 +13,23 @@ const CardNoticias = ({img}) => {
         minWidth: "300px",
         width: "300px",
     }
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
      useEffect(() => {
 
     fetch("https://nintendo-fddf6-default-rtdb.firebaseio.com/Noticias/.json")
-      .then((result) =>
+      .then((result) =>{
         result.json().then((data) => {
+            console.log(data)
+           
          
-            setItems(data.body);
+            setItems(data);
+            
           
         })
+        }
       )
       .catch(() => {
         setError(true);
@@ -38,7 +42,9 @@ const CardNoticias = ({img}) => {
   return (
     <div>
         { 
-            /*items.map((item) => {
+         Object.keys(items).length >0 && 
+         Object.keys(items).map((key) => {
+                const item= items[key]
                 const { _id, img, body, date } = item;
                 return (
                     <div style={noticiasStyle}>
@@ -46,7 +52,7 @@ const CardNoticias = ({img}) => {
                         <CardBodyNot/>                 
                     </div>
                 )       
-            })*/
+            }) 
         } 
     </div>
   )
