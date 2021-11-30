@@ -1,10 +1,13 @@
 import React from 'react'
 
-const CardBodyNot = () => {
+const CardBodyNot = ({date, body}) => {
     
     return (
         <div>
-        <h5>21/11/21</h5>
+        <h5>{date}</h5>
+        <h5>{body}</h5>
+        <span>Read more ></span>
+
             
         </div>
     )
