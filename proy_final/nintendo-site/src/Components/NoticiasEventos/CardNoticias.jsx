@@ -4,6 +4,8 @@ import CardBodyNot from "./CardBodyNot";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 import styles from "./CardImageNot.module.scss";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+//import Loader from "react-loader-spinner";
 
 
 
