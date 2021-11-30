@@ -1,16 +1,12 @@
 import React from 'react'
 import Console from './Console'
+import styles from './Console.module.scss'
 
-const Equipos = ({ _id, name, featureImage, description }) => {
+const Equipos = () => {
   return (
-    <div>
+    <div className={styles.box}>
       <h1 style={{display:'flex', justifyContent:'center', color: '#484848'}}>Elije tu consola Nintendo Switch™️</h1>
-      <Console
-        // name={name} 
-        // featureImage={featureImage}
-        // description={description}
-        // key={_id}
-      />
+      <Console />
     </div>
   )
 }

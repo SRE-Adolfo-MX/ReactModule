@@ -9,14 +9,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 
-const CardNoticias = ({img}) => {
-    const noticiasStyle= { 
-        border: "1px solid gray",
-        margin: "5px",
-        padding: "15px",
-        minWidth: "300px",
-        width: "300px",
-    }
+const CardNoticias = () => {
+
     const [items, setItems] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -48,36 +42,19 @@ const CardNoticias = ({img}) => {
     );
 
   return (
-<<<<<<< HEAD
-    <div>
+    <div className={styles.content}>
       { 
         Object.keys(items).length >0 && 
         Object.keys(items).map((key) => {
           const item= items[key]
-          const { img } = item;
+          const { img, date, body } = item;
           return (
-            <div style={noticiasStyle}>
-              <CardImageNot img={img}/>
-              <CardBodyNot/>                 
+            <div className={styles.CardNoticias}>
+              <CardImageNot img={img} />
+              <CardBodyNot date={date} body={body} />                 
             </div>
           )       
       })} 
-=======
-    <div className= {styles.content} >
-        { 
-         Object.keys(items).length >0 && 
-         Object.keys(items).map((key) => {
-                const item= items[key]
-                const { _id, img, body, date } = item;
-                return (
-                    <div className={styles.CardNoticias}>
-                        <CardImageNot img={img}/>
-                        <CardBodyNot date={date} body={body} />                 
-                    </div>
-                )       
-            }) 
-        } 
->>>>>>> 576af445e14ecd74d72196221df368e8abaf2625
     </div>
   )
 }

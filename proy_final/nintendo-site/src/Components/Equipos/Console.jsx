@@ -4,7 +4,7 @@ import ConsoleImage from "./ConsoleImage";
 import ConsoleTitle from "./ConsoleTitle";
 import styles from "./Console.module.scss";
 import Loader from "react-loader-spinner";
-import ConsoleGalley from "./ConsoleGalley";
+// import ConsoleGalley from "./ConsoleGalley";
 
 // Console es la CARD
 
@@ -46,7 +46,7 @@ const Console = () => {
       {Object.keys(items).length >0 &&
       Object.keys(items).map((key) => {
         const item = items[key]
-        console.log("item", item)
+        // console.log("item", item)
         const { _id, featureImage, description, name, gallery } = item;
         return (
           <div>
@@ -58,7 +58,14 @@ const Console = () => {
               <ConsoleImage key={_id} featureImage={featureImage} />
               <ConsoleDescription description={description} />
             </div>
-            <ConsoleGalley key={_id} gallery={gallery}/>
+            {/* <ConsoleGalley key={_id} gallery={gallery}/> */}
+            <div>
+              {gallery.map((img) => {
+                const {imgUrl} = img
+                return <img style={{width:'10%', border:'1px solid gray', margin:'5px'}} src={imgUrl} alt="" />
+              })}
+              <hr />
+            </div>
           </div>
         )
       })}

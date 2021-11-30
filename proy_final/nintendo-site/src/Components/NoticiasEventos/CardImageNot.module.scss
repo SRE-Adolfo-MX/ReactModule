@@ -2,17 +2,15 @@
 .content { 
     display: flex;
     flex-wrap: wrap;
-    align-items:stretch;
-    flex: content;
-    
- 
-    
-    
+    align-items: stretch;
+    justify-content: center;
     .CardNoticias{ 
-        width: 200px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        width: 250px;
         display:flex;
         flex-direction: column;
-       flex-wrap: wrap;
+        flex-wrap: wrap;
         margin: 10px;
         border: 1px solid gray
         color white

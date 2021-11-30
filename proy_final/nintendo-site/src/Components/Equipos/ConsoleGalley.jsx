@@ -39,12 +39,13 @@ useEffect(() => {
       {Object.keys(items).length >0 &&
       Object.keys(items).map((key) => {
         const item = items[key].gallery
-        const { gallery } = item;
-        return (
-      <div>
-        <li><img src={gallery} alt="" /></li>
-      </div>
-      )
+        item.map((img) => {
+          const {imgUrl} = img
+          console.log("img", imgUrl)
+          return imgUrl
+        })
+        // console.log("items", items[key].gallery)
+        return item
     })}
     </div>
   )

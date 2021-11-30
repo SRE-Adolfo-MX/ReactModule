@@ -1,11 +1,11 @@
 import React from 'react'
 import CardNoticias from "./CardNoticias";
-import styles from './CardImageNot.module.scss'
+// import styles from './CardImageNot.module.scss'
 
 export const Noticias = () => {
     return (
         <div >
-        <h1>Noticias y Eventos</h1>
+        <h1 style={{display:'flex', justifyContent: 'center'}}>Noticias y Eventos</h1>
         <CardNoticias />
 
             
