@@ -27,7 +27,7 @@ const Card = ({
       <CardImage imgUrl={imgUrl} />
       <div className="card-body">
         <CardTitle title={title} id={id}/>
-        <p>{price}</p>
+        <p>${price}</p>
         <Counter
           qty={qty}
           addToCart={addToCart}

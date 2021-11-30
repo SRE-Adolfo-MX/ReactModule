@@ -1,12 +1,8 @@
 import React from 'react'
 
-const ConsoleTitle = ({title}) => {
+const ConsoleTitle = ({name}) => {
   
-  return (
-    <div>
-      <h2>{title}</h2>
-    </div>
-  )
+  return <h2>{name}</h2>
 }
 
 export default ConsoleTitle

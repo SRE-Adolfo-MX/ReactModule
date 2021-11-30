@@ -6,6 +6,7 @@ import Navbar2 from "./Components/Navbar2";
 // import Content from "./Components/Content"
 import Juegos from "./Components/Juegos/Juegos"
 import Equipos from "./Components/Equipos/Equipos";
+import Noticias from "./Components/NoticiasEventos/Noticias"
 
 
 function App() {
@@ -72,6 +73,11 @@ function App() {
               } 
             />
             <Route path="/Equipos" element={<Equipos />} />
+            
+           <Route
+            path="/Noticias"
+            element={<Noticias/>}
+          />
           </Routes>
       </div>
     </div>

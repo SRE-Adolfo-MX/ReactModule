@@ -1,10 +1,9 @@
 import React from 'react'
 
-const ConsoleDescription = ({text1, text2}) => {
+const ConsoleDescription = ({description}) => {
   return (
     <div>
-      <h4>{text1}</h4>
-      <h4>{text2}</h4>
+      <h4>{description}</h4>
     </div>
   )
 }

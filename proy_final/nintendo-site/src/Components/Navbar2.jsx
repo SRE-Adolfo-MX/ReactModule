@@ -7,7 +7,7 @@ import styles from "./Styles/Navbar2.module.scss";
 
 const Navbar2 = ({cartItems, emptyCart}) => {
   return (
-    <div className={styles.navBar2} style={{display: 'flex', justifyContent:'center'}}>
+    <div className={styles.navBar2} style={{display: 'flex', justifyContent:'center', alignItems: 'center'}}>
       <Link to="/Juegos"><img src={JuegosImages} alt="Juegos" /> </Link>
       <Link to="/Equipos"><img src={Equipo} alt="Equipo" /></Link>
       <Link to="/Noticias"><img src={Noticias} alt="Noticias" /></Link>
